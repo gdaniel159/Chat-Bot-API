@@ -1,0 +1,71 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hola",
+                "Que tal",
+                "Que hay",
+                "Hey"
+            ],
+            "responses": [
+                "Hola, en que puedo ayudarte?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Adios",
+                "Muchas gracias",
+                "Que buena informacion"
+            ],
+            "responses": [
+                "Espero que tengas un buen día"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Muchas gracias",
+                "Me ayudo tu aporte",
+                "Interesante"
+            ],
+            "responses": [
+                "Feliz de ayudarte"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, can't understand you"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag" : "animales",
+            "patterns" : [
+                "Animales exoticos"
+            ],
+            "responses" : [
+                "Perico",
+                "Boa",
+                "Carpincho"
+            ],
+            "context" : [
+                ""
+            ]
+        }
+    ]
+}
