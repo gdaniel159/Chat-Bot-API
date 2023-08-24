@@ -13,7 +13,15 @@ intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
 
 # Load the vectorizer vocabulary
 vectorizer_vocab = pickle.load(open('vectorizer_vocab.pkl', 'rb'))
-vectorizer = CountVectorizer(vocabulary=vectorizer_vocab)
+
+# Reemplaza el tokenizador por defecto por tu propia función de tokenización
+def custom_tokenizer(text):
+    words_list = nltk.word_tokenize(text)
+    lemmatized_words = [lemmatizer.lemmatize(word.lower()) for word in words_list]
+    return lemmatized_words
+
+# Crea una instancia de CountVectorizer con tu función de tokenización
+vectorizer = CountVectorizer(lowercase=True, tokenizer=custom_tokenizer, vocabulary=vectorizer_vocab)
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -26,8 +34,6 @@ words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 
 model = load_model("chatbot_model.h5")
-
-vectorizer = CountVectorizer(lowercase=True, analyzer='word', tokenizer=nltk.word_tokenize, vocabulary=words)
 
 @app.route('/api', methods=['POST'])
 def handle_api_request():

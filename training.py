@@ -39,6 +39,8 @@ pattern_strings = [' '.join(pattern) for pattern, _ in documents]
 vectorizer = CountVectorizer(lowercase=True, analyzer='word', tokenizer=nltk.word_tokenize)
 X = vectorizer.fit_transform(pattern_strings).toarray()
 
+max_words = X.shape[1]
+
 # Preparing training data
 max_words = len(vectorizer.vocabulary_)
 training_data = []

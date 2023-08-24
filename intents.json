@@ -5,67 +5,100 @@
             "patterns": [
                 "Hola",
                 "Que tal",
-                "Que hay",
+                "¿Que hay?",
                 "Hey"
             ],
             "responses": [
-                "Hola, en que puedo ayudarte?"
+                "Hola, ¿en qué puedo ayudarte?"
             ],
-            "context": [
-                ""
-            ]
+            "context": [""]
         },
         {
             "tag": "goodbye",
             "patterns": [
                 "Adios",
-                "Muchas gracias",
-                "Que buena informacion"
+                "Muchas gracias"
             ],
             "responses": [
                 "Espero que tengas un buen día"
             ],
-            "context": [
-                ""
-            ]
+            "context": [""]
         },
         {
             "tag": "thanks",
             "patterns": [
-                "Muchas gracias",
+                "Gracias",
                 "Me ayudo tu aporte",
                 "Interesante"
             ],
             "responses": [
                 "Feliz de ayudarte"
             ],
-            "context": [
-                ""
-            ]
+            "context": [""]
         },
         {
             "tag": "noanswer",
-            "patterns": [],
+            "patterns": [""],
             "responses": [
-                "Sorry, can't understand you"
+                "Lo siento, no te entiendo"
             ],
-            "context": [
-                ""
-            ]
+            "context": [""]
         },
         {
-            "tag" : "animales",
-            "patterns" : [
-                "Animales exoticos"
+            "tag": "animals_exotic",
+            "patterns": [
+                "exotico",
+                "peculiar"
             ],
-            "responses" : [
-                "Perico",
-                "Boa",
-                "Carpincho"
+            "responses": [
+                "Los animales exóticos son fascinantes. Algunos ejemplos son el axolote, el okapi y el picaflor esmeralda."
             ],
-            "context" : [
-                ""
-            ]
+            "context": [""]
+        },
+        {
+            "tag": "animals_extinct",
+            "patterns": [
+                "extinto",
+                "desaparecidas"
+            ],
+            "responses": [
+                "Los animales extintos son una parte importante de la historia de la Tierra. Algunos ejemplos son el dodo, el tigre de Tasmania y el mamut lanudo."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "wild_animals",
+            "patterns": [
+                "salvaje",
+                "entorno natural",
+                "habitats naturales"
+            ],
+            "responses": [
+                "Los animales salvajes son una maravilla de la naturaleza. Algunos ejemplos son el león, el tigre y el elefante africano."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "endangered_animals",
+            "patterns": [
+                "peligro de desaparición",
+                "amenazada",
+                "conservacion"
+            ],
+            "responses": [
+                "La conservación de los animales en peligro de extinción es crucial para mantener la biodiversidad. Algunos ejemplos son el rinoceronte negro, el panda gigante y el orangután."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "animal_topics",
+            "patterns": [
+                "Curiosidades"
+            ],
+            "responses": [
+                "Me encanta hablar sobre animales. Puedo hablarte sobre animales exóticos, especies extintas, fauna salvaje y animales en peligro de extinción. ¿En qué área te gustaría saber más?"
+            ],
+            "context": [""]
         }
     ]
 }
