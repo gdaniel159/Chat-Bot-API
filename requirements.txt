@@ -1,0 +1,6 @@
+nltk
+scikit-learn
+numpy
+tensorflow
+flask
+keras
