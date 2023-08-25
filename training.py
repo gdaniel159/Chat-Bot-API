@@ -1,14 +1,15 @@
 import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
-from sklearn.feature_extraction.text import CountVectorizer  # Add this line
+from sklearn.feature_extraction.text import CountVectorizer
 import json
 import pickle
 import numpy as np
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
+
+nltk.download('punkt')
+nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
 words = []
@@ -32,7 +33,6 @@ words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words
 pickle.dump(words, open('words.pkl','wb'))
 pickle.dump(classes, open('classes.pkl','wb'))
 
-# Preparing a list of strings for the CountVectorizer
 pattern_strings = [' '.join(pattern) for pattern, _ in documents]
 
 # Creating the bag-of-words representation using CountVectorizer
